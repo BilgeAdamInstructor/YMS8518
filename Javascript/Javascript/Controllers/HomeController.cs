@@ -13,5 +13,10 @@ namespace Javascript.Controllers
         {
             return View();
         }
+
+        public IActionResult Calculator2()
+        {
+            return View();
+        }
     }
 }
