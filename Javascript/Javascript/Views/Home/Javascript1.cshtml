@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html>
+<head>
+    <script>
+        function IcerigiYazdir() {
+            document.write("bu içeriği yazdır");
+        }
+
+        function UyariVer() {
+            alert("bu uyarıyı ekrana popup olarak çıkart");
+        }
+
+        function ConsoleaMesajYazdir() {
+            console.log("bu mesaj konsolda görüntülenir");
+        }
+
+        function IcerigiDomaYazdir() {
+            document.getElementById("demo").innerHTML = "bu mesaj dom'a yazdırılıyor";
+        }
+    </script>
+</head>
+<body>
+<script>IcerigiYazdir();</script>
+<hr />
+<input type="button" value="uyarı kutusu çıkart" onclick="UyariVer();"/>
+<br />
+<input type="button" value="Console'a mesaj yazdır" onclick="ConsoleaMesajYazdir();"/>
+
+<br />
+<input type="button" value="Dom'a yazdır" onclick="IcerigiDomaYazdir();"/>
+<br />
+<div id="demo">bu içerik</div>
+</body>
+</html>
