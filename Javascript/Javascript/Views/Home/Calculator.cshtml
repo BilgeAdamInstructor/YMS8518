@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html>
+<head>
+    <script>
+        function Hesapla(operator) {
+            var par1 = document.getElementById("Par1").value;
+            var par2 = document.getElementById("Par2").value;
+            par1 = parseInt(par1);
+            par2 = parseInt(par2);
+            var result = 0;
+            result = eval(par1 + operator + par2);
+
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="Par1" />
+    <input type="text" id="Par2" />
+    <br />
+    <input type="button" value="Topla" onclick="Hesapla('+');" />
+    <input type="button" value="Çıkart" onclick="Hesapla('-');" />
+    <hr />
+    <div id="result">Sonuç</div>
+</body>
+</html>
