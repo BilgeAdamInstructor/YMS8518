@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1>Ziyaretçi Defteri</h1>
+<div id="GuestBook-Index-Form">
+    <form>
+        <input type="text" id="Name" placeholder="Adınız" />
+        <br />
+        <input type="text" id="Surname" placeholder="Soyadınız" />
+        <br />
+        <input type="email" id="Email" placeholder="E-posta adresiniz" />
+        <br />
+        <textarea id="Message" placeholder="Mesajınız..."></textarea>
+        <br />
+        <input type="button" value="Gönder" onclick="GuestBook.Page.GuestBook.Index.Send();" />
+    </form>
+</div>
+<div id="GuestBook-Index-Sending" style="display: none;">
+    <h3>Gönderiliyor...</h3>
+</div>
+<div id="GuestBook-Index-Sent" style="display: none;">
+    <h3>Teşekkür ederiz.</h3>
+</div>

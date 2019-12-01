@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html>
+<head>
+    <script src="~/js/GuestBook.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <a href="@Url.Action("Index", "Home")">Anasayfa</a> - 
+    <a href="@Url.Action("Index", "GuestBook")">Ziyaretçi Defteri</a>
+</div>
+@RenderBody()
+</body>
+</html>
