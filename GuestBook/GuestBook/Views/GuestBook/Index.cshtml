@@ -1,8 +1,18 @@
-﻿@{
+﻿@model List<GuestBook.Data.Model.GuestNote>
+@{
     Layout = "_Layout";
 }
 
 <h1>Ziyaretçi Defteri</h1>
+<div>
+    @{ 
+        foreach(var guestNote in Model)
+        {
+           <div>@guestNote.Message - @guestNote.Name</div>
+           <br />
+        }
+    }
+</div>
 <div id="GuestBook-Index-Form">
     <form>
         <input type="text" id="Name" placeholder="Adınız" />
@@ -15,10 +25,12 @@
         <br />
         <input type="button" value="Gönder" onclick="GuestBook.Page.GuestBook.Index.Send();" />
     </form>
+
+
 </div>
 <div id="GuestBook-Index-Sending" style="display: none;">
     <h3>Gönderiliyor...</h3>
 </div>
 <div id="GuestBook-Index-Sent" style="display: none;">
-    <h3>Teşekkür ederiz.</h3>
+    <h3>Teşekkür Ederiz</h3>
 </div>

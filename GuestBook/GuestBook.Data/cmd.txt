@@ -1,4 +1,4 @@
-﻿﻿add-migration Initial -Context "DataContext" -StartupProject "GuestBook" -Project "GuestBook.Data"
+﻿add-migration Initial -Context "DataContext" -StartupProject "GuestBook" -Project "GuestBook.Data"
 
 update-database -Context "DataContext" -StartupProject "GuestBook" -Project "GuestBook.Data"
 

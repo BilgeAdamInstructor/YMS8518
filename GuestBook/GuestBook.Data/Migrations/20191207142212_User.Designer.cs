@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GuestBook.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191201163455_GuestNote")]
-    partial class GuestNote
+    [Migration("20191207142212_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,6 +48,21 @@ namespace GuestBook.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("GuestNotes");
+                });
+
+            modelBuilder.Entity("GuestBook.Data.Model.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Password");
+
+                    b.Property<string>("Username");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }
